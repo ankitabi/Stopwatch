@@ -6,6 +6,11 @@ var timer2=0;
 var pause1=0;
 var pause2=0;
 
+function onbodyload(){
+    document.getElementById("start1").disabled = true;
+    document.getElementById("start2").disabled = true;
+}
+
 function showMessage() {
     var x = document.getElementById("message");
     document.getElementById("message").innerHTML="Stopwatch Set to "+time_sec+" seconds..";
@@ -26,7 +31,7 @@ function enableDisableSetButton(){
 
 function setStopwatchTimers(){
     var secs =  document.getElementById("inputSec").value;
-    if(secs!="" && !isNaN(secs)){
+    if(secs!="" && !isNaN(secs) && parseInt(secs)>0){
         reset1();
         reset2();
         time_sec = parseInt(secs);
@@ -96,7 +101,6 @@ function countUp(){
         return;
     }
     if(pause2==1)return;
-    
     if(time_sec - timer2<10){
         if(timer2%2)
             document.getElementById("t2").style.color = "black";
@@ -145,7 +149,6 @@ function countDown(){
         return;
     }
     if(pause1==1)return;
-        
     if(timer1<10){
         if(timer1%2)
             document.getElementById("t1").style.color = "black";
