@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Stopwatch</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            color:black;
+        }</style>
+</head>
+    <body style="background-image:url('bg.png')">
+        <div class="container"><div class="row">
+        <div class="heading" style="text-align:center"><h1>ClickTime Intern Challenge - Stopwatch</h1></div>
+        <br><br>
+        <div style="text-align:center">
+            <input id="inputSec" style="width:350px;height:30px;display:inline-block" placeholder="Enter the number of seconds">
+            <button type='button' id="setTimer" title="Sets the time for stopwatch" style="height:30px;width:150px" onclick="setStopwatchTimers();">Set Stopwatch</button>
+        </div><br>
+            <div id="message"  style="text-align:center"></div>
+        <br>
+        <div class="row" style="border-width:1px;border-style:solid;border-color:lightgray;border-radius:6px;background-color: white;box-shadow: 1px 1px 1px 1px #888888;">
+        <div id="down" class="col-sm-6" style="background-color:coral;">
+            <div class="watch1" style="text-align:center"><h1>Down Stopwatch</h1></div><br>
+            <div class="timer1" style="text-align:center"><h2 id="t1">0 seconds</h2></div><br>
+            <div class="control1" style="text-align:center">
+                <button type='button' id="Resetbutton1" style="height:40px;width:100px;font-size:12px" onclick="reset1();">Reset</button>
+            </div><br>
+            <div class="control3" style="text-align:center">
+                <button type='button' id="start1" style="height:40px;width:100px;font-size:12px" onclick="start_pause1();">Start</button>
+            </div><br>
+        </div>
+        <div id="up" class="col-sm-6" style="background-color:lightblue;">
+            <div class="watch2" style="text-align:center"><h1>Up Stopwatch</h1></div><br>
+            <div class="timer2" style="text-align:center"><h2 id="t2">0 seconds</h2></div><br>
+            <div class="control2" style="text-align:center">
+                <button type='button' id="Resetbutton2" style="height:40px;width:100px;font-size:12px" onclick="reset2();">Reset</button>
+            </div><br>
+            <div class="control4" style="text-align:center">
+                <button type='button' id="start2" style="height:40px;width:100px;font-size:12px" onclick="start_pause2();">Start</button>
+            </div><br>
+        </div>
+            </div>
+            </div></div>
+    </body>
+</html>
